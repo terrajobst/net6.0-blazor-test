@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using blazor_test.Data;
+using Microsoft.AspNetCore.Http.Connections;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,7 +27,12 @@ app.UseStaticFiles();
 app.UseRouting();
 
 
-app.MapBlazorHub();
+app.MapBlazorHub(o =>
+{
+    o.Transports = HttpTransportType.WebSockets |
+                   HttpTransportType.LongPolling;
+});
+
 app.MapFallbackToPage("/_Host");
 
 app.Run();
