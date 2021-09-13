@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>blazor_test</RootNamespace>
+    <UserSecretsId>5f4bc44c-e463-4a7a-8de9-a71552ec296c</UserSecretsId>
   </PropertyGroup>
 
 </Project>
